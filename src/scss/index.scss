@@ -1,0 +1,56 @@
+/* antd css */
+@import '~antd/dist/antd.css';
+/* font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+/*scss file*/
+@import url('./app.scss');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif !important;
+}
+:root {
+  --main-font: 'Nunito', sans-serif;
+
+  --text-color-white: #ffffff;
+  --text-color-orange-50: #fff2e7;
+  --text-color-orange-300: #ff9138;
+  --text-color-orange-500: #ff7506;
+  --text-color-orange-400: #ff9138;
+  --text-color-gray-3: #a9a9b0;
+  --text-color-gray-4: #7e7d88;
+  --text-color-gray-200: #a9a9b0;
+  --text-color-gray-300: #7e7d88;
+  --text-color-gray-400: #535261;
+  --text-color-gray-500: #282739;
+
+  --background-white: #ffffff;
+  --background-wrapper: #f7f7f7;
+  --background-orange-50: #fff2e7;
+  --background-orange-300: #FFAC6A;
+  --background-orange-500: #ff7506;
+  --background-orange-400: #ff9138;
+  --background-red: #ff4747;
+
+  --border-gray-100: #D4D4D7;
+
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  --text-font-size-14: 14px;
+  --text-font-size-16: 16px;
+  --text-font-size-20: 20px;
+  --text-font-size-24: 24px;
+
+  --text-font-style-normal: normal;
+
+  --box-shadow-btn: 0px 0px 6px #e7e9f2;
+
+  --border-radius-btn: 8px;
+}

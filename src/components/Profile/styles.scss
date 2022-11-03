@@ -1,0 +1,27 @@
+.profile {
+    display: flex;
+    align-items: center;
+}
+// .profile__notifi {
+// }
+.profile__content {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+}
+.avatar {
+  width: '40px';
+  height: '40px';
+}
+.information {
+    padding: 0px 0 10px 8px;
+    p {
+        font-size: 12px;
+        padding-top: 25px;
+        margin-bottom: unset;
+    }
+    h4 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
