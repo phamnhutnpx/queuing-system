@@ -19,5 +19,7 @@ const icons = {
   dotGrayIcon: require('./dotGray.svg').default,
   rightTriangleIcon: require('./rightTriangle.svg').default,
   addSquareIcon: require('./addSquare.svg').default,
+  downIcon: require('../imgs/down.svg').default,
+  searchIcon: require('../imgs/search.svg').default,
 };
 export default icons;

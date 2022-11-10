@@ -1,0 +1,14 @@
+.dropdown--services-btn {
+  width: 154px;
+
+  position: relative;
+  &__icon {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+  }
+  .dropdown--services-custom {
+    display: flex !important;
+    justify-content: space-between;
+  }
+}

@@ -1,24 +1,24 @@
 .service__add {
   padding: 10px 24px 32px 24px;
-}
-.service__add-form {
-  padding: 16px 24px;
-}
-.form__element {
-  .title {
-    color: var(--text-color-orange-500);
-    font-size: var(--text-font-size-20);
-    font-weight: var(--font-weight-700);
+  .service__add-form {
+    padding: 16px 24px;
   }
-}
-.form__information {
-  .container {
-    display: flex;
-    justify-content: space-between;
-    .ant-col-8 {
-      flex: unset;
+  .form__element {
+    .title {
+      color: var(--text-color-orange-500);
+      font-size: var(--text-font-size-20);
+      font-weight: var(--font-weight-700);
     }
   }
-}
-.form__rulefornumber {
+  .form__information {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      .ant-col-8 {
+        flex: unset;
+      }
+    }
+  }
+  .form__rulefornumber {
+  }
 }
