@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Checkbox, Form, Input, InputNumber, Layout } from 'antd';
+import { Button, Checkbox, Col, Form, Input, InputNumber, Layout, Row } from 'antd';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import './style.scss';
 
@@ -31,6 +31,7 @@ const AddService = () => {
       <h2 className="service__title">Quản lý dịch vụ</h2>
       <Form
         {...layout}
+        layout="vertical"
         name="nest-messages"
         onFinish={onFinish}
         validateMessages={validateMessages}
@@ -39,8 +40,8 @@ const AddService = () => {
       >
         <div className="form__element form__information">
           <p className="title">Thông tin dịch vụ</p>
-          <div className="container">
-            <div className="w-100">
+          <Row className="container">
+            <Col span={12}>
               <Form.Item
                 name={['serviceCode', 'name']}
                 label="Mã dịch vụ: "
@@ -55,40 +56,52 @@ const AddService = () => {
               >
                 <Input />
               </Form.Item>
-            </div>
-            <Form.Item name={['user', 'introduction']} label="Mô tả: ">
-              <Input.TextArea />
-            </Form.Item>
-          </div>
+            </Col>
+            <Col span={12}>
+              <Form.Item name={['user', 'introduction']} label="Mô tả: ">
+                <Input.TextArea />
+              </Form.Item>
+            </Col>
+          </Row>
         </div>
         <div className="form__element form__rulefornumber">
           <div className="title">Quy tắc cấp số</div>
-          <div>
-            <div>
+          <div className="rulefornumber__group">
+            <div className="rulefornumber__group--item">
               <Checkbox onChange={onChange}>Tăng tự động từ:</Checkbox>
               <InputNumber min={1} max={9999} defaultValue={1} />
               &nbsp;đến&nbsp;
               <InputNumber min={1} max={9999} defaultValue={9999} />
             </div>
-            <div>
+            <div className="rulefornumber__group--item">
               <Checkbox onChange={onChange}>Prefix:</Checkbox>
               <InputNumber min={1} max={9999} defaultValue={1} />
             </div>
-            <div>
+            <div className="rulefornumber__group--item">
               <Checkbox onChange={onChange}>Surfix:</Checkbox>
               <InputNumber min={1} max={9999} defaultValue={1} />
             </div>
-            <div>
+            <div className="rulefornumber__group--item">
               <Checkbox onChange={onChange}>Reset mỗi ngày</Checkbox>
             </div>
           </div>
         </div>
-        <p>* Là trường thông tin bắt buộc</p>
+        <p className="note">
+          <span>*</span> Là trường thông tin bắt buộc
+        </p>
         <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-          <Button type="primary" htmlType="submit">
+          <Button
+            className="btn--default btn--outline"
+            type="primary"
+            htmlType="submit"
+          >
             Hủy bỏ
           </Button>
-          <Button type="primary" htmlType="submit">
+          <Button
+            className="btn--default btn--normal"
+            type="primary"
+            htmlType="submit"
+          >
             Thêm dịch vụ
           </Button>
         </Form.Item>

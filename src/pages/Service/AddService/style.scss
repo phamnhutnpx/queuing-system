@@ -1,5 +1,10 @@
 .service__add {
   padding: 10px 24px 32px 24px;
+  .service__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color-orange-400);
+  }
   .service__add-form {
     padding: 16px 24px;
   }
@@ -14,11 +19,79 @@
     .container {
       display: flex;
       justify-content: space-between;
+      .ant-form-item-label {
+        font-weight: var(--font-weight-600);
+      }
+      .ant-col-16,
       .ant-col-8 {
         flex: unset;
+      }
+      .ant-col-16 {
+        max-width: 95%;
+      }
+      .ant-input {
+        border-radius: 8px;
+        &:hover,
+        &:focus {
+          border-color: var(--background-orange-500);
+          box-shadow: 0 0 0 2px rgba(255, 124, 24, 0.2);
+        }
+      }
+      textarea#nest-messages_user_introduction {
+        min-height: 20vh;
       }
     }
   }
   .form__rulefornumber {
+    .rulefornumber__group {
+      &--item {
+        margin-bottom: 5px;
+        .ant-checkbox-wrapper {
+          min-width: 15%;
+        }
+        .ant-input-number {
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .note {
+    color: #7e7d88;
+    span {
+      color: red;
+    }
+  }
+
+  .btn__defaul {
+    width: 147px;
+    height: 48px;
+  }
+
+  .btn--outline {
+    background: var(--text-color-orange-50);
+    color: var(--background-orange-400);
+    margin-right: 32px;
+  }
+
+  .btn--normal {
+    background: var(--background-orange-400);
+    color: var(--text-white);
+    span {
+      color: #fff;
+    }
+  }
+
+  .btn--outline,
+  .btn--normal {
+    font-size: var(--text-font-size-16);
+    font-style: var(--text-font-style-normal);
+    font-weight: var(--font-weight-700);
+    line-height: calc(22 / 16);
+    border: 1.5px solid var(--background-orange-400);
+    box-shadow: var(--box-shadow-btn);
+    border-radius: var(--border-radius-btn);
+    padding: 13px 23px;
+    display: inline-flex;
+    align-items: center;
   }
 }
