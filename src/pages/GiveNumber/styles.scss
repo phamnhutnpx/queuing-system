@@ -1,4 +1,4 @@
-.device {
+.GN {
   width: 100%;
   max-width: 1440px;
   margin-top: 29px;
@@ -19,10 +19,9 @@
     max-width: 1112px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    // justify-content: space-between;
 
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 0;
 
     &--default {
       font-size: 16px;
@@ -31,12 +30,29 @@
       margin-bottom: 4px;
     }
 
-    &--operating {
+    &--services,
+    &--condition,
+    &--supply {
       margin-right: 24px;
     }
 
-    &--connect {
-      margin-right: 188px;
+    &--date {
+      &__group {
+        display: flex;
+
+        &--icon {
+          display: flex;
+          align-items: center;
+        }
+
+        :nth-child(1) {
+          margin-right: 8px;
+        }
+
+        :nth-child(3) {
+          margin-right: 18px;
+        }
+      }
     }
   }
 
@@ -140,7 +156,8 @@
   html [type='button'],
   [type='reset'],
   [type='submit'] {
-    background: var(--text-white);
+    height: 44px;
+    // background: var( --background-white);
     border: 1.5px solid #d4d4d7;
     border-radius: 8px;
   }
@@ -150,11 +167,11 @@
     border-color: var(--background-orange-500) !important;
   }
 
-  //style search input
+  //
   .search-input {
     width: 300px !important;
     height: 44px;
-    background: var(--text-white);
+    // background: var( --background-white);
     border: 1.5px solid #d4d4d7 !important;
     border-radius: 8px !important;
   }
@@ -172,5 +189,13 @@
 
   .ant-pagination-item {
     background-color: #f0f2f5 !important;
+  }
+  .ant-table table {
+    text-align: center !important;
+  }
+
+  .ant-picker {
+    padding: 10px 11px 10px !important;
+    border-radius: 8px;
   }
 }

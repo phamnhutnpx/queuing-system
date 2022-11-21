@@ -1,0 +1,58 @@
+.role {
+  width: 100%;
+  max-width: 1440px;
+  margin-top: 29px;
+  margin-left: 24px;
+  &--title {
+    display: initial;
+    width: 200px;
+    height: 36px;
+    h2 {
+      font-size: 24px;
+      font-weight: var(--font-weight-700);
+      line-height: calc(36 / 24);
+      color: var(--background-orange-500);
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    width: 1112px;
+    max-width: 1112px;
+
+    &--default {
+      font-size: 16px;
+      font-weight: var(--font-weight-600);
+      line-height: calc(24 / 16);
+      margin-bottom: 4px;
+    }
+  }
+
+  &--tables {
+    display: flex;
+    margin-top: 16px;
+
+    // table
+    .ant-table-wrapper {
+      width: 1112px;
+      max-width: 1112px;
+
+      a {
+        text-decoration: underline !important;
+      }
+    }
+  }
+
+  .search-input {
+    width: 300px !important;
+    height: 44px;
+    background: var(--background-white);
+    border: 1.5px solid #d4d4d7 !important;
+    border-radius: 8px !important;
+  }
+
+  .ant-pagination {
+    display: none;
+  }
+}

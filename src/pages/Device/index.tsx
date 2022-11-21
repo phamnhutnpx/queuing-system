@@ -6,11 +6,13 @@ import type { ColumnsType } from 'antd/es/table';
 import { Link } from 'react-router-dom';
 
 // import SearchCoponent from '../../components/Search';
-// import Operating from '../../components/DropdownComponent/Operating';
-// import Connection from '../../components/DropdownComponent/Connection';
+
+import icons from '../../shared/assests/icons';
+import Operating from '../../components/DropdownComponent/Operating';
+import Connection from '../../components/DropdownComponent/Connection';
+import SearchCoponent from '../../components/Search';
 
 import './style.scss';
-import icons from '../../shared/assests/icons';
 
 interface DataType {
   key: string;
@@ -84,7 +86,7 @@ const columns: ColumnsType<DataType> = [
     title: '',
     dataIndex: 'detail',
     key: 'detail',
-    render: () => <Link to="/thietbi/detail">Chi tiết</Link>,
+    render: () => <Link to="/device/detail">Chi tiết</Link>,
     width: '82px',
   },
 
@@ -92,7 +94,7 @@ const columns: ColumnsType<DataType> = [
     title: '',
     dataIndex: 'update',
     key: 'update',
-    render: () => <Link to="/thietbi/update">Cập nhật</Link>,
+    render: () => <Link to="/device/update">Cập nhật</Link>,
     width: '106px',
   },
 
@@ -247,40 +249,61 @@ const data: DataType[] = [
     status: ['Ngưng hoạt động', 'Hoạt động'],
     statusConnect: ['Kết nối', 'Mất kết nối'],
     services: 'Khám tim mạch, Khám mắt...',
+  },
+  {
+    key: '11',
+    deviceId: 'KIO_01',
+    name: 'Kiosk',
+    IPaddress: '192.168.1.10',
+    status: ['Ngưng hoạt động', 'Hoạt động'],
+    statusConnect: ['Kết nối', 'Mất kết nối'],
+    services: 'Khám tim mạch, Khám mắt...',
     // services:
     //   'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.',
-    // tags: ["nice", "developer"],
+    // tags: ["loser"],
   },
-  // {
-  //   key: '11',
-  //   deviceId: 'KIO_01',
-  //   name: 'Kiosk',
-  //   IPaddress: '192.168.1.10',
-  //   status: ['Ngưng hoạt động', 'Hoạt động'],
-  //   statusConnect: ['Kết nối', 'Mất kết nối'],
-  //   services: 'Khám tim mạch, Khám mắt...',
-  //   // services:
-  //   //   'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.',
-  //   // tags: ["loser"],
-  // },
-  // {
-  //   key: '12',
-  //   deviceId: 'KIO_01',
-  //   name: 'Kiosk',
-  //   IPaddress: '192.168.1.10',
-  //   status: ['Ngưng hoạt động', 'Hoạt động'],
-  //   statusConnect: ['Kết nối', 'Mất kết nối'],
-  //   services: 'Khám tim mạch, Khám mắt...',
-  //   // services:
-  //   //   'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.',
-  //   // tags: ["cool", "teacher"],
-  // },
+  {
+    key: '12',
+    deviceId: 'KIO_01',
+    name: 'Kiosk',
+    IPaddress: '192.168.1.10',
+    status: ['Ngưng hoạt động', 'Hoạt động'],
+    statusConnect: ['Kết nối', 'Mất kết nối'],
+    services: 'Khám tim mạch, Khám mắt...',
+    // services:
+    //   'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.',
+    // tags: ["cool", "teacher"],
+  },
+  {
+    key: '13',
+    deviceId: 'KIO_01',
+    name: 'Kiosk',
+    IPaddress: '192.168.1.10',
+    status: ['Ngưng hoạt động', 'Hoạt động'],
+    statusConnect: ['Kết nối', 'Mất kết nối'],
+    services: 'Khám tim mạch, Khám mắt...',
+    // services:
+    //   'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.',
+    // tags: ["cool", "teacher"],
+  },
+  {
+    key: '14',
+    deviceId: 'KIO_01',
+    name: 'Kiosk',
+    IPaddress: '192.168.1.10',
+    status: ['Ngưng hoạt động', 'Hoạt động'],
+    statusConnect: ['Kết nối', 'Mất kết nối'],
+    services: 'Khám tim mạch, Khám mắt...',
+    // services:
+    //   'Khám tim mạch, Khám sản - Phụ khoa, Khám răng hàm mặt, Khám tai mũi họng, Khám hô hấp, Khám tổng quát.',
+    // tags: ["cool", "teacher"],
+  },
 ];
 
 const paginationConfig = {
   className: 'device--tables__pagination',
   responsive: true,
-  pageSize: 10,
+  pageSize: 9,
   total: 100,
   showSizeChanger: false,
   showQuickJumper: false,
@@ -296,24 +319,24 @@ const Device: React.FC = () => {
         <div className="actions">
           <div className="actions--operating">
             <div className="actions--operating__text actions--default">Trạng thái hoạt động</div>
-            {/* <Operating /> */}
+            <Operating />
           </div>
 
           <div className="actions--connect">
             <div className="actions--connect__text actions--default">Trạng thái kết nối</div>
-            {/* <Connection /> */}
+            <Connection />
           </div>
 
           <div className="actions--search">
             <div className="actions-search__text actions--default">Từ khóa</div>
-            {/* <SearchCoponent /> */}
+            <SearchCoponent />
           </div>
         </div>
 
         <div className="device--tables">
           <Table bordered columns={columns} dataSource={data} pagination={paginationConfig} />
 
-          <Link to="/thietbi/add" className="device--add__btn">
+          <Link to="/device/add" className="device--add__btn">
             <img src={icons.addSquareIcon} alt="addDevice" />
             <h4>Thêm thiết bị</h4>
           </Link>
