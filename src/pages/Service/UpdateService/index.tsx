@@ -20,7 +20,7 @@ const validateMessages = {
   },
 };
 
-const AddService = () => {
+const UpdateService = () => {
   const navigate = useNavigate();
   const onFinish = (values: any) => {
     console.log(values);
@@ -32,7 +32,7 @@ const AddService = () => {
     navigate('/service');
   };
   return (
-    <Layout className="service__add">
+    <Layout className="service__update">
       <h2 className="service__title">Quản lý dịch vụ</h2>
       <Form
         {...layout}
@@ -41,7 +41,7 @@ const AddService = () => {
         onFinish={onFinish}
         validateMessages={validateMessages}
         // style={{ background: '#c3c3c3' }}
-        className="service__add-form"
+        className="service__update-form"
       >
         <div className="form__element form__information">
           <p className="title">Thông tin dịch vụ</p>
@@ -104,7 +104,7 @@ const AddService = () => {
             Hủy bỏ
           </Button>
           <Button className="btn--default btn--normal" type="primary" htmlType="submit">
-            Thêm dịch vụ
+            Cập nhật
           </Button>
         </Form.Item>
       </Form>
@@ -112,4 +112,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default UpdateService;

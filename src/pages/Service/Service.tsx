@@ -16,7 +16,7 @@ interface DataType {
   description: string;
   status: string;
   detail: string;
-  update: string;
+  update: any;
 }
 const columns: ColumnsType<DataType> = [
   {
@@ -54,7 +54,7 @@ for (let i = 0; i < 100; i++) {
     description: `Dịch vụ ${i} hoạt động`,
     status: `Đang hoạt động`,
     detail: `Chi tiết`,
-    update: `Cập nhật`,
+    update: <Link to="/service/update">Cập nhật</Link>,
   });
 }
 

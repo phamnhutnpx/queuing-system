@@ -9,6 +9,7 @@ import AddService from '../pages/Service/AddService';
 import AddDevice from '../pages/Device/AddDevice';
 import Detail from '../pages/Device/Detail';
 import UpdateDevice from '../pages/Device/UpdateDevice';
+import UpdateService from '../pages/Service/UpdateService';
 
 const publicRoutes = [
   { path: '/signin', component: <SignIn />, layout: null },
@@ -19,6 +20,7 @@ const publicRoutes = [
   { path: '/device/update', component: <UpdateDevice /> },
   { path: '/service', component: <Service /> },
   { path: '/service/add', component: <AddService /> },
+  { path: '/service/update', component: <UpdateService /> },
   { path: '/givenumber', component: <GiveNumber /> },
   { path: '/report', component: <Report /> },
   { path: '/setting/role', component: <RoleManagement /> },
