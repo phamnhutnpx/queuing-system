@@ -41,7 +41,7 @@ const Condition = () => {
 
   return (
     <>
-      <Space wrap>
+      <Space wrap className="condition">
         <Dropdown overlay={menu}>
           <Button className="condition-btn">
             <Space className="condition-custom">

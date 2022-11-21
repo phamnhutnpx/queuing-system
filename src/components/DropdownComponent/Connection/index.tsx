@@ -37,7 +37,7 @@ const Connection = () => {
 
   return (
     <>
-      <Space wrap>
+      <Space wrap className="connection">
         <Dropdown overlay={menu}>
           <Button className="connection-btn">
             <Space className="connection-custom">

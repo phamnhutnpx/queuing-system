@@ -1,0 +1,181 @@
+.addRole {
+  width: 100%;
+  max-width: 1192px;
+  height: 534px;
+  margin-top: 29px;
+  margin-left: 24px;
+
+  &--title {
+    display: initial;
+    width: 200px;
+    height: 36px;
+    h2 {
+      font-size: 24px;
+      font-weight: var(--font-weight-700);
+      line-height: calc(36 / 24);
+      color: var(--background-orange-500);
+    }
+  }
+  &--group__wrapper {
+    background: var(--background-white);
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 16px;
+  }
+
+  &--group__content {
+    margin-left: 24px;
+    margin-bottom: 24px;
+    padding-top: 16px;
+  }
+  &--group__title {
+    h3 {
+      font-size: var(--text-font-size-20);
+      font-weight: var(--font-weight-700);
+      line-height: calc(30 / 20);
+      color: var(--background-orange-500);
+      font-style: var(--text-font-style-normal);
+    }
+  }
+
+  .form--group {
+    display: flex;
+
+    .ant-form-item-label > label {
+      font-size: var(--text-font-size-16);
+      font-weight: var(--font-weight-600);
+      line-height: calc(24 / 16);
+      color: var(--text-color-gray-500);
+      font-style: var(--text-font-style-normal);
+    }
+
+    // changed display of input element
+    .ant-row {
+      display: block !important;
+    }
+
+    //
+    &__input1 {
+      width: 560px;
+      height: 44px;
+      &::-webkit-input-placeholder,
+      &::placeholder {
+        font-size: var(--text-font-size-16);
+        font-style: var(--text-font-style-normal);
+        font-weight: var(--font-weight-400);
+        color: var(--text-color-gray-200);
+        line-height: calc(24 / 16);
+      }
+    }
+
+    &__input2 {
+      width: 560px;
+      height: 160px;
+      &::-webkit-input-placeholder,
+      &::placeholder {
+        font-size: var(--text-font-size-16);
+        font-style: var(--text-font-style-normal);
+        font-weight: var(--font-weight-400);
+        color: var(--text-color-gray-200);
+        line-height: calc(24 / 16);
+        transform: translateY(-250%);
+      }
+    }
+
+    &__description {
+      font-size: var(--text-font-size-14);
+      font-style: var(--text-font-style-normal);
+      font-weight: var(--font-weight-400);
+      color: var(--text-color-gray-300);
+      line-height: calc(21 / 16);
+    }
+
+    // &__information {
+    // }
+
+    &__title {
+      font-size: var(--text-font-size-16);
+      font-style: var(--text-font-style-normal);
+      font-weight: var(--font-weight-600);
+      color: var(--text-color-gray-500);
+      line-height: calc(24 / 16);
+    }
+
+    &__actions {
+      margin-left: 24px;
+
+      .content {
+        width: 560px;
+        height: 420px;
+        margin-top: 8px;
+        margin-bottom: 24px;
+        background: var(--background-orange-50);
+        border-radius: 8px;
+
+        &--title1,
+        &--title2 {
+          margin-left: 24px;
+          h2 {
+            font-size: var(--text-font-size-20);
+            font-style: var(--text-font-style-normal);
+            font-weight: var(--font-weight-700);
+            color: var(--text-color-orange-500);
+            line-height: calc(30 / 20);
+          }
+
+          .ant-checkbox + span {
+            font-size: var(--text-font-size-16);
+            font-style: var(--text-font-style-normal);
+            font-weight: var(--font-weight-600);
+            color: var(--text-color-gray-400);
+            line-height: calc(24 / 16);
+          }
+
+          .ant-checkbox {
+            margin-top: 12px;
+          }
+        }
+
+        &--title1 {
+          padding-top: 16px;
+        }
+
+        &--title2 {
+          padding-top: 24px;
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+
+      &--default {
+        width: 147px;
+        height: 48px;
+      }
+
+      .btn--outline {
+        background: var(--text-color-orange-50);
+        color: var(--background-orange-400);
+        margin-right: 32px;
+      }
+
+      .btn--normal {
+        background: var(--background-orange-400);
+        color: var(--text-color-white);
+      }
+
+      .btn--outline,
+      .btn--normal {
+        font-size: var(--text-font-size-16);
+        font-style: var(--text-font-style-normal);
+        font-weight: var(--font-weight-700);
+        line-height: calc(24 / 16);
+        border: 1.5px solid var(--background-orange-400);
+        box-shadow: var(--box-shadow-btn);
+        border-radius: var(--border-radius-btn);
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

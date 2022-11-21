@@ -37,7 +37,7 @@ const Supply = () => {
 
   return (
     <>
-      <Space wrap>
+      <Space wrap className="supply">
         <Dropdown overlay={menu}>
           <Button className="supply-btn">
             <Space className="supply-custom">

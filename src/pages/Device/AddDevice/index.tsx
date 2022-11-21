@@ -4,6 +4,7 @@ import { Button, Form, Input, Select } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 import icons from '../../../shared/assests/icons';
+// import BreadCrumb from '../../../components/Breadcrumb';
 
 import './styles.scss';
 
@@ -26,6 +27,7 @@ const AddDevice = () => {
   return (
     <>
       <div className="device--group">
+        {/* <BreadCrumb /> */}
         <h2>Quản lý thiết bị</h2>
 
         <Form

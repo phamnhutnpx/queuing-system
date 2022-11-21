@@ -5,7 +5,7 @@ import type { MenuProps } from 'antd';
 import icons from '../../../shared/assests/icons';
 import './styles.scss';
 
-const Services = () => {
+const ServicesGiveNum = () => {
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     message.info('Click on left button.');
     console.log('click left button', e);
@@ -20,7 +20,7 @@ const Services = () => {
       onClick={handleMenuClick}
       items={[
         {
-          label: 'Tất cả',
+          label: 'Khám tim mạch',
           key: '1',
         },
         {
@@ -41,12 +41,12 @@ const Services = () => {
 
   return (
     <>
-      <Space wrap className="dropdown--services">
+      <Space wrap className="dropdown--servicesGN">
         <Dropdown overlay={menu}>
-          <Button className="dropdown--services-btn">
-            <Space className="dropdown--services-custom">
-              Tất cả
-              <div className="dropdown--services-btn__icon">
+          <Button className="dropdown--servicesGN-btn">
+            <Space className="dropdown--servicesGN-custom">
+              Chọn dịch vụ
+              <div className="dropdown--servicesGN-btn__icon">
                 <img src={icons.downIcon} alt="downIcon" />
               </div>
             </Space>
@@ -57,4 +57,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesGiveNum;

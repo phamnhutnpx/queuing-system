@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button, Form, Input, Select, Tag } from 'antd';
 import icons from '../../../shared/assests/icons';
+// import BreadCrumb from '../../../components/Breadcrumb';
 import { useNavigate } from 'react-router-dom';
 import './styles.scss';
 
@@ -29,6 +30,7 @@ const UpdateDevice = () => {
   return (
     <>
       <div className="device--group__update">
+        {/* <BreadCrumb /> */}
         <h2>Quản lý thiết bị</h2>
 
         <Form

@@ -37,7 +37,7 @@ const Operating = () => {
 
   return (
     <>
-      <Space wrap>
+      <Space wrap className="operating">
         <Dropdown overlay={menu}>
           <Button className="operating-btn">
             <Space className="operating-custom">
