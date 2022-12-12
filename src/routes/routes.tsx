@@ -14,6 +14,7 @@ import GiveNewNum from '../pages/GiveNumber/GiveNewNum';
 import AddRole from '../pages/Setting/RoleManagement/AddRole';
 import Detail from '../pages/Device/Detail';
 import UpdateService from '../pages/Service/UpdateService';
+import DetailService from '../pages/Service/DetailService';
 
 const publicRoutes = [
   { path: '/signin', component: <SignIn />, layout: null },
@@ -27,6 +28,7 @@ const publicRoutes = [
   { path: '/service', component: <Service /> },
   { path: '/service/add', component: <AddService /> },
   { path: '/service/update', component: <UpdateService /> },
+  { path: '/service/detail', component: <DetailService /> },
   { path: '/givenumber', component: <GiveNumber /> },
   { path: '/givenumber/add', component: <GiveNewNum /> },
   { path: '/givenumber/detail', component: <GiveNumDetail /> },
