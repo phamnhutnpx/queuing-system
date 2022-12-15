@@ -8,6 +8,7 @@ import Search from 'antd/lib/input/Search';
 import icons from '../../../shared/assests/icons';
 import './style.scss';
 import { ColumnsType } from 'antd/lib/table';
+import DateTime from '../component/DateTime';
 const { RangePicker } = DatePicker;
 type RangeValue = [Moment | null, Moment | null] | null;
 interface DataType {
@@ -112,58 +113,55 @@ const DetailService = () => {
           </Row>
         </div>
         <div className="page-create-number">
-          <Row className="devicepage__filter">
-            <Col span={24} style={{ display: 'flex' }}>
-              <div className="devicepage__filter-item">
-                <Typography.Title level={5} className="devicepage__filter-item-title">
-                  Trạng thái hoạt động
+          <Row className="servicepage__filter">
+            <Col span={24} style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div className="servicepage__filter-item">
+                <Typography.Title level={5} className="servicepage__filter-item-title">
+                  Trạng thái
                 </Typography.Title>
-                <Select className="devicepage__filter-item-body" defaultValue={'Tất cả'}>
+                <Select className="servicepage__filter-item-body" defaultValue={'Tất cả'}>
                   <Option value="">Tất cả</Option>
-                  <Option value="1">Hoạt động</Option>
-                  <Option value="2">Ngưng hoạt động</Option>
+                  <Option value="1">Đã hoàn thành</Option>
+                  <Option value="2">Đã thực hiện</Option>
+                  <Option value="3">Vắng</Option>
                 </Select>
               </div>
 
-              <div className="devicepage__filter-item">
-                <Typography.Title level={5} className="devicepage__filter-item-title">
-                  Trạng thái kết nối
+              <div className="servicepage__filter-item">
+                <Typography.Title level={5} className="servicepage__filter-item-title">
+                  Chọn thời gian
                 </Typography.Title>
-                <RangePicker
-                  value={dates || value}
-                  disabledDate={disabledDate}
-                  onCalendarChange={val => setDates(val)}
-                  onChange={val => setValue(val)}
-                  onOpenChange={onOpenChange}
-                />
+                <DateTime />
               </div>
-              <div className="devicepage__filter-last-item">
-                <div className="devicepage__filter-item">
-                  <Typography.Title level={5} className="devicepage__filter-item-title">
+              <div className="servicepage__filter-last-item">
+                <div className="servicepage__filter-item">
+                  <Typography.Title level={5} className="servicepage__filter-item-title">
                     Từ khóa
                   </Typography.Title>
                   <Search
                     placeholder="Nhập từ khóa"
                     allowClear
-                    className="devicepage__filter-item-body"
+                    className="servicepage__filter-item-body"
                   />
                 </div>
               </div>
             </Col>
           </Row>
-          <Row className="devicepage__body">
-            <Col span={24} className="devicepage__body-table">
+          <Row className="servicepage__body">
+            <Col span={24} className="servicepage__body-table">
               <Table columns={columns} dataSource={data} />
             </Col>
           </Row>
         </div>
-        <div>
-          <div className="devicepage__body-modify-container">
-            <div className="devicepage__body-modify-container-icon">
-              <img src={icons.backSquare} alt="" />
-            </div>
-            <Link to={'/service/update'} className="devicepage__body-modify-container-label">
+        <div className="action">
+          <div className="action__wrapper">
+            <Link to={'/service/update'} className="update">
+              <img src={icons.editSquareIcon} alt="edit" />
               Cập nhật danh sách
+            </Link>
+            <Link to={'/service'} className="back">
+              <img src={icons.backSquare} alt="back" />
+              Quay lại
             </Link>
           </div>
         </div>

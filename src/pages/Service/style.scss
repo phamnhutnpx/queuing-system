@@ -191,28 +191,5 @@
       }
     }
   }
-  .ant-pagination-item {
-    border: unset;
-    background: unset;
-    a {
-      color: var(--text-color-gray-800);
-      &:hover {
-        color: var(--text-color-gray-800);
-      }
-    }
-  }
-  .ant-pagination-item-active:hover {
-    border-color: unset;
-  }
-  .ant-pagination-item-active {
-    font-weight: var(--font-weight-600);
-    color: var(--text-color-white);
-    background: var(--background-orange-500);
-    border-color: none;
-  }
-  .ant-pagination-prev .ant-pagination-item-link,
-  .ant-pagination-next .ant-pagination-item-link {
-    border: unset;
-    background-color: unset;
-  }
+  
 }

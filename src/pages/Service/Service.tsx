@@ -1,10 +1,12 @@
-import React from 'react';
-import { Col, DatePicker, Input, Layout, Row, Select, Table } from 'antd';
+import React, { ReactNode } from 'react';
+import { Col, Input, Layout, Row, Select, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import moment from 'moment';
 import './style.scss';
 import icons from '../../shared/assests/icons';
 import { Link } from 'react-router-dom';
+import DateTime from './component/DateTime';
+import { CaretLeftOutlined } from '@ant-design/icons';
+import { CaretRightOutlined } from '@ant-design/icons/lib/icons';
 
 const { Option } = Select;
 const { Search } = Input;
@@ -57,9 +59,20 @@ for (let i = 0; i < 100; i++) {
     update: <Link to="/service/update">Cập nhật</Link>,
   });
 }
-
+const itemRender = (_: any, type: string, originalElement: ReactNode) => {
+  if (type === 'prev') {
+    return (
+      <>
+        <CaretLeftOutlined />
+      </>
+    );
+  }
+  if (type === 'next') {
+    return <CaretRightOutlined />;
+  }
+  return originalElement;
+};
 const Service = () => {
-  const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
   const onSearch = (value: string) => console.log(value);
 
   return (
@@ -80,21 +93,7 @@ const Service = () => {
                 </Col>
                 <Col className="content__filter-element-2" flex={3}>
                   <label>Chọn thời gian</label>
-                  <div className="element-item">
-                    <DatePicker
-                      defaultValue={moment('10/10/2021', dateFormatList[0])}
-                      format={dateFormatList}
-                    />
-                    <img
-                      style={{ padding: '0 10px' }}
-                      src={icons.rightTriangleIcon}
-                      alt="rightTriangleIcon"
-                    />
-                    <DatePicker
-                      defaultValue={moment('18/10/2021', dateFormatList[0])}
-                      format={dateFormatList}
-                    />
-                  </div>
+                  <DateTime />
                 </Col>
               </Row>
             </Col>
@@ -104,7 +103,15 @@ const Service = () => {
             </Col>
           </Row>
           <Row className="content__table">
-            <Table columns={columns} dataSource={data} />
+            <Table
+              columns={columns}
+              dataSource={data}
+              pagination={{
+                pageSize: 9,
+                itemRender: itemRender,
+              }}
+              bordered
+            />
           </Row>
         </Col>
         <Col className="service__content-add">
