@@ -1,6 +1,6 @@
 import Home from '../pages/Home';
 import Device from '../pages/Device';
-import SignIn from '../pages/SignIn';
+import SignIn from '../pages/Auth/SignIn';
 import { RoleManagement, AccountManagement, LogUser } from '../pages/Setting';
 import Report from '../pages/Report';
 import GiveNumber from '../pages/GiveNumber';

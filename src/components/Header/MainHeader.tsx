@@ -16,7 +16,7 @@ const HeaderStyle = styled(Header)`
 
 const MainHeader = () => {
   return (
-    <HeaderStyle>
+    <HeaderStyle style={{ position: 'fixed', zIndex: '999', width: '85%', left: '200px' }}>
       <MainBreadcrumb />
       <Profile />
     </HeaderStyle>
