@@ -25,5 +25,6 @@ const icons = {
   searchIcon: require('./search.svg').default,
   backSquare: require('./backSquare.svg').default,
   requiredIcons: require('./requiredIcons.svg').default,
+  documentDownload: require('./documentDownload.svg').default,
 };
 export default icons;
