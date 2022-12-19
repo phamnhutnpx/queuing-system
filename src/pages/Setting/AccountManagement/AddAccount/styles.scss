@@ -1,4 +1,4 @@
-.addRole {
+.addAccount {
   width: 100%;
   // max-width: 1192px;
   height: 534px;
@@ -178,4 +178,10 @@
       }
     }
   }
+  .connection-btn {
+    width: 100% !important;
+  }
+}
+.ant-space .ant-space-horizontal .ant-space-align-center .connection {
+  width: 100%;
 }
