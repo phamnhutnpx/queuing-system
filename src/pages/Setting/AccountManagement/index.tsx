@@ -68,7 +68,7 @@ const AccountManagement = () => {
       title: '',
       dataIndex: 'update',
       key: 'update',
-      render: () => <Link to="/setting/role/update">Cập nhật</Link>,
+      render: () => <Link to="/setting/account/update">Cập nhật</Link>,
     },
   ];
 

@@ -3,14 +3,13 @@ import React from 'react';
 import { Button, Form, Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
-
 import icons from '../../../../shared/assests/icons';
 
 import './styles.scss';
 import RoleName from '../../../../components/DropdownComponent/RoleName';
 import Operating from '../../../../components/DropdownComponent/Operating';
 
-const AddAccount = () => {
+const UpdateAccount = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
@@ -156,4 +155,4 @@ const AddAccount = () => {
   );
 };
 
-export default AddAccount;
+export default UpdateAccount;

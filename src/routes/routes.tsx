@@ -17,6 +17,7 @@ import UpdateService from '../pages/Service/UpdateService';
 import DetailService from '../pages/Service/DetailService';
 import UpdateRole from '../pages/Setting/RoleManagement/UpdateRole';
 import AddAccount from '../pages/Setting/AccountManagement/AddAccount';
+import UpdateAccount from '../pages/Setting/AccountManagement/UpdateAccount';
 
 const publicRoutes = [
   { path: '/signin', component: <SignIn />, layout: null },
@@ -42,6 +43,7 @@ const publicRoutes = [
   { path: '/setting/role/update', component: <UpdateRole /> },
   { path: '/setting/account', component: <AccountManagement /> },
   { path: '/setting/account/add', component: <AddAccount /> },
+  { path: '/setting/account/update', component: <UpdateAccount /> },
   { path: '/setting/user', component: <LogUser /> },
 ];
 
