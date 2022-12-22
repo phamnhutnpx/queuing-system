@@ -1,0 +1,56 @@
+.account-management {
+  width: 100%;
+  padding-top: 29px;
+  padding-left: 24px;
+  &--title {
+    display: initial;
+    height: 36px;
+    h2 {
+      font-size: 24px;
+      font-weight: var(--font-weight-700);
+      line-height: calc(36 / 24);
+      color: var(--background-orange-500);
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &--default {
+      font-size: 16px;
+      font-weight: var(--font-weight-600);
+      line-height: calc(24 / 16);
+      margin-bottom: 4px;
+    }
+    &--search {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 7vw;
+    }
+  }
+
+  &--tables {
+    display: flex;
+    margin-top: 16px;
+
+    // table
+    .ant-table-wrapper {
+      width: 92%;
+      a {
+        text-decoration: underline !important;
+      }
+    }
+  }
+
+  .search-input {
+    width: 300px !important;
+    height: 44px;
+    background: var(--background-white);
+    border: 1.5px solid #d4d4d7 !important;
+    border-radius: 8px !important;
+  }
+
+  
+}

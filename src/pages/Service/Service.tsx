@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import DateTime from './component/DateTime';
 import { CaretLeftOutlined } from '@ant-design/icons';
 import { CaretRightOutlined } from '@ant-design/icons/lib/icons';
+import Operating from '../../components/DropdownComponent/Operating';
+import SearchCoponent from '../../components/Search';
 
 const { Option } = Select;
 const { Search } = Input;
@@ -85,11 +87,7 @@ const Service = () => {
               <Row className="w-100">
                 <Col className="content__filter-element-1" flex={2}>
                   <label>Trạng thái hoạt động</label>
-                  <Select defaultValue="all" style={{ minWidth: '200px' }}>
-                    <Option value="all">Tất cả</Option>
-                    <Option value="action">Hoạt động</Option>
-                    <Option value="dormant">Ngưng hoạt động</Option>
-                  </Select>
+                  <Operating />
                 </Col>
                 <Col className="content__filter-element-2" flex={3}>
                   <label>Chọn thời gian</label>
@@ -98,8 +96,8 @@ const Service = () => {
               </Row>
             </Col>
             <Col className="content__filter-element w-100">
-              <label htmlFor="searchId">Từ khóa</label>
-              <Search id="searchId" placeholder="Nhập từ khóa" onSearch={onSearch} />
+              <p>Từ khóa</p>
+              <SearchCoponent />
             </Col>
           </Row>
           <Row className="content__table">

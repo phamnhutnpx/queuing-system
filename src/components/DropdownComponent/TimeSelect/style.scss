@@ -1,0 +1,25 @@
+.element-item {
+    .ant-picker {
+      border-radius: 8px;
+    }
+    .ant-picker:hover,
+    .ant-picker-focused {
+      border-color: var(--background-orange-500);
+      box-shadow: 0 0 0 2px rgba(255, 124, 24, 0.2);
+    }
+    .ant-picker-suffix {
+      color: var(--background-orange-500);
+    }
+  }
+  .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+  .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+    color: var(--text-color-white);
+    background: var(--background-orange-500);
+  }
+  .ant-picker-today-btn {
+    color: var(--text-color-orange-400);
+    &:hover {
+      color: var(--text-color-orange-500);
+    }
+  }

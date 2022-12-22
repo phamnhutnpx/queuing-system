@@ -5,7 +5,7 @@ import type { ColumnsType } from 'antd/es/table';
 
 import { Link } from 'react-router-dom';
 
-// import SearchCoponent from '../../components/Search';
+import SearchCoponent from '../../components/Search';
 // import Operating from '../../components/DropdownComponent/Operating';
 // import Connection from '../../components/DropdownComponent/Connection';
 
@@ -13,7 +13,7 @@ import './styles.scss';
 import icons from '../../shared/assests/icons';
 import Operating from '../../components/DropdownComponent/Operating';
 import Connection from '../../components/DropdownComponent/Connection';
-import SearchCoponent from '../../components/Searrch';
+// import SearchCoponent from '../../components/Searrch';
 
 interface DataType {
   key: string;

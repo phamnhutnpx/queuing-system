@@ -7,7 +7,6 @@ import GiveNumber from '../pages/GiveNumber';
 import Service from '../pages/Service';
 import AddService from '../pages/Service/AddService';
 import AddDevice from '../pages/Device/AddDevice';
-import DeviceDetail from '../pages/Device/DeviceDetail';
 import GiveNumDetail from '../pages/GiveNumber/GiveNumDetail';
 import UpdateDevice from '../pages/Device/UpdateDevice';
 import GiveNewNum from '../pages/GiveNumber/GiveNewNum';
