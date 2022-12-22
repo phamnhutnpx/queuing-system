@@ -1,0 +1,105 @@
+.service__detail {
+  padding: 10px 24px 32px 24px;
+  .service__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color-orange-400);
+  }
+}
+.page-body-detail {
+  .page-description {
+    box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
+    border-radius: 12px;
+    padding: 25px;
+    background-color: white;
+    width: 30%;
+    margin-right: 25px;
+    text-align: start;
+    &-title {
+      color: #ff7506;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      height: 44px;
+      margin-bottom: 15px;
+      .label {
+        width: 100px;
+        display: flex;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .content {
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        span {
+          margin-right: 10px;
+        }
+        & .box {
+          border: 1.5px solid #d4d4d7;
+          padding: 10px 12px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .page-create-number {
+    width: 60%;
+  }
+
+  .servicepage__body {
+    margin-top: 10px;
+    .ant-table-thead > tr > th {
+      position: relative;
+      color: var(--text-color-white);
+      font-weight: 500;
+      text-align: left;
+      background: var(--background-orange-400);
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.3s ease;
+    }
+    .ant-table-container table > thead > tr:first-child th:first-child {
+      border-top-left-radius: 10px;
+    }
+    .ant-table-container table > thead > tr:first-child th:last-child {
+      border-top-right-radius: 10px;
+    }
+  }
+  .action {
+    position: fixed;
+    right: 0;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 6rem;
+      background-color: var(--text-color-orange-50);
+      padding: 12px 10px;
+      border-radius: 10px;
+
+      .update,.back {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-color-orange-500);
+        img {
+          width: 20px;
+        }
+      }
+      .update {
+
+      }
+      .back {
+
+      }
+    }
+  }
+  .servicepage__filter-item {
+    label {
+      color: var(--text-color-gray-500);
+      font-weight: 600;
+    }
+  }
+}

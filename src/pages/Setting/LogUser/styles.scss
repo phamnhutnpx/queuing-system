@@ -1,10 +1,9 @@
-.role {
+.account-management {
   width: 100%;
   padding-top: 29px;
   padding-left: 24px;
   &--title {
     display: initial;
-    width: 200px;
     height: 36px;
     h2 {
       font-size: 24px;
@@ -27,7 +26,7 @@
     }
     &--search {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding-right: 7vw;
     }
   }
@@ -53,7 +52,5 @@
     border-radius: 8px !important;
   }
 
-  .ant-pagination {
-    display: none;
-  }
+  
 }

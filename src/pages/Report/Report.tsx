@@ -1,30 +1,25 @@
 import React, { ReactNode } from 'react';
-import { Col, Input, Layout, Row, Select, Table } from 'antd';
+import { Col, Layout, Row, Table } from 'antd';
 import type { ColumnsType } from 'antd/es/table';
-import './style.scss';
-import icons from '../../shared/assests/icons';
 import { Link } from 'react-router-dom';
-import DateTime from './component/DateTime';
 import { CaretLeftOutlined } from '@ant-design/icons';
 import { CaretRightOutlined } from '@ant-design/icons/lib/icons';
-import Operating from '../../components/DropdownComponent/Operating';
-import SearchCoponent from '../../components/Search';
 
-const { Option } = Select;
-const { Search } = Input;
+import './style.scss';
+import DateTime from './component/DateTime';
+import icons from '../../shared/assests/icons';
 
 interface DataType {
   key: React.Key;
   id: string;
   name: string;
-  description: string;
-  status: string;
-  detail: any;
-  update: any;
+  providedTime: string;
+  status: string | any;
+  source: string;
 }
 const columns: ColumnsType<DataType> = [
   {
-    title: 'Mã dịch vụ',
+    title: 'Số thứ tự',
     dataIndex: 'id',
   },
   {
@@ -32,20 +27,16 @@ const columns: ColumnsType<DataType> = [
     dataIndex: 'name',
   },
   {
-    title: 'Mô tả',
-    dataIndex: 'description',
+    title: 'Thời gian cấp',
+    dataIndex: 'providedTime',
   },
   {
-    title: 'Trạng thái hoạt động',
+    title: 'Tình trạng',
     dataIndex: 'status',
   },
   {
-    title: '',
-    dataIndex: 'detail',
-  },
-  {
-    title: '',
-    dataIndex: 'update',
+    title: 'Nguồn cấp',
+    dataIndex: 'source',
   },
 ];
 
@@ -55,10 +46,14 @@ for (let i = 0; i < 100; i++) {
     key: i,
     id: `KIO_${i + 1}`,
     name: `Kiosk ${i}`,
-    description: `Dịch vụ ${i} hoạt động`,
-    status: `Đang hoạt động`,
-    detail: <Link to="/service/detail">Chi tiết</Link>,
-    update: <Link to="/service/update">Cập nhật</Link>,
+    providedTime: `${i}:00 17/12/2022`,
+    status: (
+      <span>
+        <img src={icons.dotYellowIcon} alt="" />
+        &nbsp; Đang hoạt động
+      </span>
+    ),
+    source: `Hệ thống ${i}`,
   });
 }
 const itemRender = (_: any, type: string, originalElement: ReactNode) => {
@@ -74,30 +69,37 @@ const itemRender = (_: any, type: string, originalElement: ReactNode) => {
   }
   return originalElement;
 };
-const Service = () => {
-  const onSearch = (value: string) => console.log(value);
 
+const download = (csv: string, filename: string) => {
+  const element = document.createElement('a');
+  element.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+};
+
+const handleDownload = () => {
+  const csv = 'column1,column2\nvalue1,value2\n';
+  download(csv, 'myfile.csv');
+};
+const Report = () => {
   return (
-    <Layout className="service">
-      <h2 className="service__title">Quản lý dịch vụ</h2>
-      <Row className="service__content">
-        <Col className="service__content-data w-100">
+    <Layout className="report">
+      <Row className="report__content">
+        <Col className="report__content-data w-100">
           <Row className="content__filter">
             <Col className="content__filter-element w-100">
               <Row className="w-100">
-                <Col className="content__filter-element-1" flex={2}>
-                  <label>Trạng thái hoạt động</label>
-                  <Operating />
-                </Col>
                 <Col className="content__filter-element-2" flex={3}>
                   <label>Chọn thời gian</label>
                   <DateTime />
                 </Col>
               </Row>
-            </Col>
-            <Col className="content__filter-element w-100">
-              <p>Từ khóa</p>
-              <SearchCoponent />
             </Col>
           </Row>
           <Row className="content__table">
@@ -112,10 +114,10 @@ const Service = () => {
             />
           </Row>
         </Col>
-        <Col className="service__content-add">
-          <Link className="btn-addService" to="/service/add">
-            <img src={icons.addSquareIcon} alt="" />
-            <p>Thêm dịch vụ</p>
+        <Col className="report__content-add">
+          <Link className="btn-download" to="/report" onClick={handleDownload}>
+            <img src={icons.documentDownload} alt="" />
+            <p>Tải về</p>
           </Link>
         </Col>
       </Row>
@@ -123,4 +125,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Report;

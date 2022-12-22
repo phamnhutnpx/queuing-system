@@ -13,10 +13,8 @@ const DefaultLayout = ({ children }: any) => {
   return (
     <>
       <Sidebar />
-      <ContainLayout>
-        <MainHeader />
-        {children}
-      </ContainLayout>
+      <MainHeader />
+      <ContainLayout className="layout-content">{children}</ContainLayout>
     </>
   );
 };

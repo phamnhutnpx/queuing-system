@@ -1,8 +1,7 @@
 .device {
   width: 100%;
-  max-width: 1440px;
-  margin-top: 29px;
-  margin-left: 24px;
+  // max-width: 1440px;
+  padding: 24px;
   &--title {
     display: initial;
     width: 200px;
@@ -16,7 +15,7 @@
   }
 
   .actions {
-    max-width: 1112px;
+    // max-width: 1112px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -86,8 +85,10 @@
     width: 80px;
     height: 94px;
 
-    margin-left: 17px;
+    // margin-left: 17px;
     background-color: var(--background-orange-50);
+    position: fixed;
+    right: 0;
 
     h4 {
       font-size: 14px;
@@ -103,7 +104,7 @@
     font-size: var(--text-font-size-16);
     line-height: calc(24 / 16);
     font-weight: var(--font-weight-700) !important;
-    color: var(--text-white) !important;
+    color: var(--text-color-white) !important;
     background: var(--background-orange-400) !important;
     height: 49px;
   }
@@ -116,7 +117,7 @@
     border-top-right-radius: 12px !important;
   }
   .ant-table {
-    width: 1112px;
+    width: 95%;
     height: 490px;
     border-radius: 12px !important;
   }

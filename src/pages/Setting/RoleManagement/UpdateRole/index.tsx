@@ -10,7 +10,7 @@ import icons from '../../../../shared/assests/icons';
 
 import './styles.scss';
 
-const AddRole = () => {
+const UpdateRole = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
@@ -50,7 +50,7 @@ const AddRole = () => {
         >
           <div className="addRole--group__content">
             <div className="addRole--group__title">
-              <h3>Thông tin vai trò</h3>
+              <h3>Thông tin thiết bị</h3>
             </div>
 
             <div className="form--group">
@@ -146,7 +146,7 @@ const AddRole = () => {
               type="primary"
               htmlType="submit"
             >
-              Thêm
+              Cập nhật
             </Button>
           </Form.Item>
         </div>
@@ -155,4 +155,4 @@ const AddRole = () => {
   );
 };
 
-export default AddRole;
+export default UpdateRole;

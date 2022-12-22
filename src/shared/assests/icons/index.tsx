@@ -19,10 +19,12 @@ const icons = {
   dotGrayIcon: require('./dotGray.svg').default,
   rightTriangleIcon: require('./rightTriangle.svg').default,
   addSquareIcon: require('./addSquare.svg').default,
+  editSquareIcon: require('./editSquare.svg').default,
 
   downIcon: require('./down.svg').default,
   searchIcon: require('./search.svg').default,
   backSquare: require('./backSquare.svg').default,
   requiredIcons: require('./requiredIcons.svg').default,
+  documentDownload: require('./documentDownload.svg').default,
 };
 export default icons;

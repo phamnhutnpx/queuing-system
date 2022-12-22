@@ -84,7 +84,9 @@ const Sidebar: React.FC = () => {
 
   return (
     <>
-      <Sider style={{ backgroundColor: '#fff', minHeight: '100vh' }}>
+      <Sider
+        style={{ backgroundColor: '#fff', minHeight: '100vh', position: 'fixed', zIndex: '999' }}
+      >
         <LogoAlta />
         <Menu
           onSelect={item => {

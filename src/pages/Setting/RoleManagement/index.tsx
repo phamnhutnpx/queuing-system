@@ -47,7 +47,7 @@ const RoleManagement = () => {
       title: '',
       dataIndex: 'update',
       key: 'update',
-      render: () => <Link to="/role/update">Cập nhật</Link>,
+      render: () => <Link to="/setting/role/update">Cập nhật</Link>,
       width: '110px',
     },
   ];
@@ -102,13 +102,13 @@ const RoleManagement = () => {
           <div className="role--title">
             <h2>Danh sách vai trò</h2>
           </div>
-
-          <div className="actions--search">
+        </div>
+        <div className="actions--search">
+          <div>
             <div className="actions-search__text actions--default">Từ khóa</div>
             <SearchCoponent />
           </div>
         </div>
-
         <div className="role--tables">
           <Table bordered columns={columns} dataSource={data} />
 

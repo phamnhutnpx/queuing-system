@@ -9,7 +9,7 @@ const SearchCoponent: React.FC = () => {
 
   return (
     <>
-      <div className="search">
+      <div className="search" style={{ height: '44px' }}>
         <Input placeholder="Nhập từ khóa" className="search-input" />
 
         <div className="search-icon">

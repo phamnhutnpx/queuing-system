@@ -1,12 +1,12 @@
-.service {
+.report {
   padding: 10px;
   background: var(--background-wrapper);
-  .service__title {
+  .report__title {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-color-orange-400);
   }
-  .service__detail {
+  .report__detail {
     display: flex;
     width: 100%;
   }
@@ -168,14 +168,14 @@
     height: 49px;
     padding: 0 17px;
   }
-  .service__content {
+  .report__content {
     &-data {
       width: 92%;
     }
   }
-  .service__content-add {
+  .report__content-add {
     width: auto;
-    .btn-addService {
+    .btn-download {
       position: fixed;
       padding: 12px 4px;
       background: var(--background-orange-50);
