@@ -17,6 +17,7 @@ import Condition from '../../components/DropdownComponent/Condition';
 import SearchCoponent from '../../components/Search';
 
 import './styles.scss';
+import TimeSelect from '../../components/DropdownComponent/TimeSelect';
 interface DataType {
   key: string;
   stt: string;
@@ -236,7 +237,6 @@ const paginationConfig = {
   className: 'device--tables__pagination',
   responsive: true,
   pageSize: 9,
-  total: 100,
   showSizeChanger: false,
   showQuickJumper: false,
 };
@@ -284,8 +284,8 @@ const GiveNumber: React.FC = () => {
           <div className="actions--date">
             <div className="actions--date__text actions--default">Chọn thời gian</div>
 
-            <div className="actions--date__group">
-              <DatePicker
+            {/* <div className="actions--date__group"> */}
+            {/* <DatePicker
                 suffixIcon={false}
                 defaultValue={moment('2015/01/01', dateFormat)}
                 format={dateFormat}
@@ -299,8 +299,9 @@ const GiveNumber: React.FC = () => {
                 suffixIcon={false}
                 defaultValue={moment('2015/01/01', dateFormat)}
                 format={dateFormat}
-              />
-            </div>
+              /> */}
+            <TimeSelect />
+            {/* </div> */}
 
             {/* <RangePicker
               separator={false} // dấu phân cách giữa 2 date
