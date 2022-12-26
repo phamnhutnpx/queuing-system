@@ -20,6 +20,7 @@ const icons = {
   rightTriangleIcon: require('./rightTriangle.svg').default,
   addSquareIcon: require('./addSquare.svg').default,
   editSquareIcon: require('./editSquare.svg').default,
+  warningIcon: require('./warning.svg').default,
 
   downIcon: require('./down.svg').default,
   searchIcon: require('./search.svg').default,
