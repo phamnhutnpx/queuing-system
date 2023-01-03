@@ -69,6 +69,10 @@
 }
 .wrap-login__input {
   margin-bottom: 20px;
+  .cancel {
+    background: var(--background-white);
+    color: var(--text-color-orange-500);
+  }
 }
 .login__input {
   border-radius: 10px;

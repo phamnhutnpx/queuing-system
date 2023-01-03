@@ -17,9 +17,11 @@ import DetailService from '../pages/Service/DetailService';
 import UpdateRole from '../pages/Setting/RoleManagement/UpdateRole';
 import AddAccount from '../pages/Setting/AccountManagement/AddAccount';
 import UpdateAccount from '../pages/Setting/AccountManagement/UpdateAccount';
+import ForgotPass from '../pages/Auth/ForgotPass';
 
 const publicRoutes = [
   { path: '/signin', component: <SignIn />, layout: null },
+  { path: '/reset', component: <ForgotPass />, layout: null },
 
   { path: '/', component: <Home /> },
 
