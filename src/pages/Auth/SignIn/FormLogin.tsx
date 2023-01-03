@@ -9,8 +9,33 @@ const FormLogin = () => {
   console.log('[auth]', auth);
 
   const onFinish = (values: any) => {
-    console.log('Success:', values.names);
-    navigate('/');
+    setLoginStatus('pending');
+    delete data.remember;
+
+    signInWithEmailAndPassword(auth, data.names.username, data.names.password)
+      .then(userCredential => {
+        userCredential.user
+          .getIdToken()
+          .then(token => {
+            setLoginStatus('fulfill');
+            document.cookie = `accessToken=${token}; SameSite=None; Secure`;
+            dispatch(setToken({ token, remember: true }));
+            setTimeout(() => {
+              navigate('/');
+            }, 300);
+          })
+          .catch(error => {
+            setLoginStatus('reject');
+          });
+        getProfile('iswFzKlZkLdTaJvJNEib').then(user => {
+          dispatch(updateProfileInStore({ user }));
+        });
+      })
+      .catch(() => {
+        setLoginStatus('reject');
+        //  setErrorStatus(formatMessage("login.account.error"));
+        signOut(auth);
+      });
   };
   return (
     <Form

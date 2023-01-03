@@ -14,6 +14,12 @@ import icons from '../../shared/assests/icons';
 import Operating from '../../components/DropdownComponent/Operating';
 import Connection from '../../components/DropdownComponent/Connection';
 // import SearchCoponent from '../../components/Searrch';
+import { Col, Row, Typography } from 'antd';
+import { Link, useParams } from 'react-router-dom';
+import { images } from '../../../../assets/images';
+import { useEffect, useState } from 'react';
+import { getDetailProvideNumberOfDevice } from '../../../../modules/device/respository';
+import { formatDate } from '../../../ProvideNumbersPage/component/TableProvideNumbers/TableProvideNumbers';
 
 interface DataType {
   key: string;
@@ -290,6 +296,24 @@ const paginationConfig = {
 };
 
 const Device: React.FC = () => {
+  const { id } = useParams();
+  const [number, setNumber] = useState<NumberProvideProps>();
+  useEffect(() => {
+    getDetailProvideNumberOfDevice({ id }).then(numberProvide => {
+      setNumber({
+        id: numberProvide?.id,
+        ordinalNumbers: numberProvide?.service?.option?.preFix
+          ? numberProvide?.ordinalNumbers + numberProvide?.service?.serviceId
+          : numberProvide?.service?.serviceId + numberProvide?.ordinalNumbers,
+        customerName: numberProvide?.customerName,
+        serviceName: numberProvide?.service?.serviceName,
+        createdTime: formatDate(numberProvide?.createdAt.seconds),
+        expiredTime: formatDate(numberProvide?.createdAt.seconds, true),
+        statusCreateNumbers: 'waiting',
+        supplySource: numberProvide?.device?.deviceName,
+      });
+    });
+  }, [id]);
   return (
     <>
       <div className="device">
